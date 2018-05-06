@@ -1,5 +1,6 @@
 #
-# Copyright 2014 The CyanogenMod Project
+# Copyright (C) 2018 The LineageOS Open Source Project
+# Copyright (C) 2018 The Liquid Remix Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,15 +15,5 @@
 # limitations under the License.
 #
 
-# Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-
-# Inherit from f400 device
-$(call inherit-product, device/lge/f400/device.mk)
-
-# Set those variables here to overwrite the inherited values.
-PRODUCT_DEVICE := f400
-PRODUCT_NAME := full_f400
-PRODUCT_BRAND := lge
-PRODUCT_MODEL := LG-F400
-PRODUCT_MANUFACTURER := LGE
+PRODUCT_MAKEFILES := \
+    $(LOCAL_DIR)/liquid.mk
